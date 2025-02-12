@@ -1,7 +1,9 @@
 :root {
     --Green: #0B9586;
     --Green2: #3CAB90;
+    --BlackGreen: #3cab8fdc;
     --yellow: #FFBB1C;
+    --Blackyellow: #dca421;
     --White: White;
     --gray: #77777778;
 }
@@ -41,7 +43,7 @@ body {
 
 @media (min-width:1200px) {
     .container {
-        width: 1170px;
+        width: 1270px;
     }
 }
 
@@ -124,16 +126,96 @@ header .contactus span {
 
 /* slider */
 .slider {
+    position: relative;
     background-image: url('../images/slider01.png');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: calc(100vh - 83.2px);
+    padding-top: 5rem;
 }
 
 @media(max-width:768px) {
     .slider {
         height: calc(100vh - 80px);
     }
+}
+
+.slider >.container {
+    margin-top:5rem;
+}
+
+.slider .container .info {
+    color: var(--White);
+}
+
+.slider .container .info ul {
+    position:absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translatex(-50%);
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.slider .container .info ul li {
+    width:3rem;
+    height:0.2rem;
+    background-color:var(--gray);
+    border-radius: 2rem;
+    margin: 0px 0.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.slider .container .info ul li.active {
+    background-color:var(--White);
+}
+
+.slider .container .info h1 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 2.5rem;
+    max-width: 30rem;
+}
+
+.slider .container .info p {
+    max-width: 40rem;
+    line-height:1.5rem;
+}
+
+.slider .container .info .contactbutton {
+    margin-top: 2rem;
+}
+
+.slider .container .info .contactbutton button {
+    padding: 1rem 1.5rem;
+    border: 0px;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight:600;
+}
+
+
+.slider .container .info .contactbutton button:nth-child(1) {
+    background-color:var(--Green);
+    color: var(--White);
+    margin-right: 1rem;
+}
+
+.slider .container .info .contactbutton button:nth-child(1):hover {
+    background-color:var(--BlackGreen);
+}
+
+.slider .container .info .contactbutton button:nth-child(2) {
+    background-color:var(--yellow);
+    color: black;
+}
+
+.slider .container .info .contactbutton button:nth-child(2):hover {
+    background-color:var(--Blackyellow);
 }
