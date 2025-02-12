@@ -1,0 +1,139 @@
+:root {
+    --Green: #0B9586;
+    --Green2: #3CAB90;
+    --yellow: #FFBB1C;
+    --White: White;
+    --gray: #77777778;
+}
+
+/* Global */
+* {
+    -webkit-box-sizing:border-box ;
+    -o-box-sizing:border-box ;
+    -moz-box-sizing:border-box ;
+    box-sizing:border-box ;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    margin: 0px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 13px;
+}
+
+@media (min-width:767px) {
+    .container {
+        width: 755px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* header */
+header {
+    background-color: var(--Green);
+    position: sticky;
+    top: 0px;
+    box-shadow: 1px 1px 5px #d4d4d4ad, 0px 2px 5px #000000a3;
+}
+
+header >.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media(max-width:768px) {
+    header >.container {
+        padding: 0px 1rem;
+    }
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav img {
+    width: 5rem;
+    height: 5rem;
+    margin-right: 1rem;
+}
+
+@media(max-width:768px) {
+    header nav img {
+        margin-right: 0rem;
+    }
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+header nav ul li:hover {
+    background-color: var(--gray);
+    transition: 0.3s;
+}
+
+header nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: var(--White);
+    margin: 2rem 1rem;
+}
+
+@media(max-width:768px) {
+    header nav ul li a {
+        font-size: 0.7rem;
+        margin: 2rem 0.4rem;
+    }
+}
+
+header .contactus i {
+    color: var(--yellow)
+}
+
+header .contactus span {
+    color: var(--White)
+}
+
+@media(max-width:768px) {
+    header .contactus span {
+        font-size: 0.7rem;
+    }
+}
+
+/* slider */
+.slider {
+    background-image: url('../images/slider01.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: calc(100vh - 83.2px);
+}
+
+@media(max-width:768px) {
+    .slider {
+        height: calc(100vh - 80px);
+    }
+}
