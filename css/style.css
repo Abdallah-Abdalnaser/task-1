@@ -5,7 +5,7 @@
     --yellow: #FFBB1C;
     --Blackyellow: #dca421;
     --White: White;
-    --gray: #77777778;
+    --gray: #66666670;
 }
 
 /* Global */
@@ -134,6 +134,7 @@ header .contactus span {
     width: 100%;
     height: calc(100vh - 83.2px);
     padding-top: 5rem;
+    transition: 0.3s;
 }
 
 @media(max-width:768px) {
