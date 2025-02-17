@@ -6,6 +6,8 @@
     --Blackyellow: #dca421;
     --White: White;
     --gray: #66666670;
+    --gray2:#2A3334;
+    ;
 }
 
 /* Global */
@@ -21,6 +23,14 @@ body {
     font-family: "Roboto", serif;
     font-optical-sizing: auto;
     margin: 0px;
+}
+
+::-webkit-scrollbar {
+    width: 11px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--Green2);
 }
 
 .container {
@@ -53,6 +63,7 @@ header {
     position: sticky;
     top: 0px;
     box-shadow: 1px 1px 5px #d4d4d4ad, 0px 2px 5px #000000a3;
+    z-index:2;
 }
 
 header >.container {
@@ -220,3 +231,193 @@ header .contactus span {
 .slider .container .info .contactbutton button:nth-child(2):hover {
     background-color:var(--Blackyellow);
 }
+
+/* about */
+
+.about {
+    margin-top: 3rem;
+}
+
+.about >.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width:992px) {
+    .about >.container {
+        flex-direction: column;
+    }
+}
+
+.about .container .description {
+    flex: 2;
+}
+
+@media (max-width:992px) {
+    .about .container .description {
+        order:2 ;
+    }
+}
+
+.about .container .description h1 {
+    font-size: 2.2rem;
+    max-width: 34rem;
+}
+
+.about .container .description p {
+    max-width: 34rem;
+    color: var(--gray2);
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.about .container .description ol {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.about .container .description ol li {
+    counter-increment: list-counter;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    margin: 8px 0;
+}
+
+.about .container .description ol li::before {
+    content: "0" counter(list-counter) " / ";
+    color: green;
+    font-weight: bold;
+}
+
+.about .container .images{
+    position: relative;
+    flex: 1;
+    margin-left: 1rem;
+}
+
+.about .container .images img {}
+
+@media (max-width:992px) {
+    .about .container .images img {
+        width: 90%;
+        float: right;
+    }
+}
+
+.about .container .images .card {
+    position: absolute;
+    background-color: var(--yellow);
+    bottom: 5%;
+    left:-10%;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+}
+
+@media (max-width:992px) {
+    .about .container .images .card {
+        left: 0%;
+    }
+}
+
+.about .container .images .card i {
+    font-size: 2rem;
+}
+
+.about .container .images .card p {
+    color: var(--gray2);
+    max-width: 12rem;
+}
+
+/* contactus */
+
+.contact {
+    display: flex;
+    align-items: center;
+    background-image: url("../images/contactus.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--White);
+    margin-top: 5rem;
+    margin-bottom: 6rem;
+    height: 60vh;
+}
+
+.contact .container h1 {
+    margin: 0px;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.contact .container p {
+    max-width: 30rem;
+}
+
+.contact .container button {
+    background-color: var(--yellow);
+    color: var(--gray2);
+    padding: 0.7rem 1rem;
+    border-radius: 2rem;
+    border: 0px;
+    cursor: pointer;
+}
+
+/* Solar kits */
+
+.solarkits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.solarkits >.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+.solarkits .container h1 {
+    font-size: 2rem;
+    margin: 0px;
+}
+
+.solarkits .container > p {
+    font-size: 0.9rem;
+    color: var(--gray2);
+    max-width: 50rem;
+    text-align: center;
+}
+.solarkits .container .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(301px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.solarkits .container .cards .card {
+    box-shadow: 0px 0px 6px #eee;
+    border-radius: 1rem;
+}
+.solarkits .container .cards .card figure {
+    margin: 0px;
+}
+.solarkits .container .cards .card figure img {
+    width: 100%;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+.solarkits .container .cards .card figure figcaption {
+    padding: 1.5rem;
+}
+.solarkits .container .cards .card figure figcaption h3 {}
+.solarkits .container .cards .card figure figcaption p {
+    font-size: 0.8rem;
+    color: var(--gray2);
+}
+.solarkits .container .cards .card figure figcaption button {
+    border: 0px;
+    font-weight: 600;
+    background-color: var(--White);
+    color: var(--Green);
+    cursor: pointer;
+}
+.solarkits .container .cards .card figure figcaption button i {}
