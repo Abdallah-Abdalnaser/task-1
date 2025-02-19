@@ -548,7 +548,6 @@ header .contactus span {
 
 .products .container .info p {
     font-size: 0.9rem;
-    /* max-width: 20rem; */
     color: var(--gray2);
 }
 
@@ -573,8 +572,6 @@ header .contactus span {
     border-radius: 1rem;
 }
 
-.products .container .cards .card h3 {}
-
 .products .container .cards .card p {
     font-size: 0.9rem;
     color: var(--gray2);
@@ -587,4 +584,49 @@ header .contactus span {
     padding: 0px;
 }
 
-.products .container .cards .card button i {}
+/* values */
+
+.values {
+    padding: 4rem 0rem;
+}
+
+.values .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.values .container .info {
+    text-align:center;
+}
+
+.values .container .info h1 {}
+
+.values .container .info p {
+    font-size: 0.9rem;
+    color: var(--gray2);
+    margin-bottom: 2rem;
+}
+
+.values .container .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.values .container .cards .card {
+    background-color: var(--lightGreen2);
+    border: 2px solid var(--Green);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.values .container .cards .card img {}
+
+.values .container .cards .card h3 {}
+
+.values .container .cards .card p {
+    font-size: 0.9rem;
+    color: var(--gray2);
+    line-height: 1.5;
+}
