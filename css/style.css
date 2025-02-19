@@ -57,7 +57,7 @@ body {
 
 @media (min-width:1200px) {
     .container {
-        width: 1270px;
+        width: 1200px;
     }
 }
 
@@ -301,7 +301,7 @@ header .contactus span {
 }
 
 @media (max-width:992px) {
-    .about .container .images img {
+    .about .container .images > img {
         width: 90%;
         float: right;
     }
@@ -320,10 +320,6 @@ header .contactus span {
     .about .container .images .card {
         left: 0%;
     }
-}
-
-.about .container .images .card img {
-    font-size: 2rem;
 }
 
 .about .container .images .card p {
@@ -349,6 +345,12 @@ header .contactus span {
     margin: 0px;
     font-size: 3rem;
     margin-bottom: 2rem;
+}
+
+@media (max-width:992px) {
+    .contact .container h1 {
+        font-size: 2rem;
+    }
 }
 
 .contact .container p {
@@ -490,11 +492,22 @@ header .contactus span {
     margin-bottom: 1rem;
 }
 
+@media (max-width:992px) {
+    .replacement .container .layout h1 {
+        font-size: 1.5rem;
+    }
+}
+
 .replacement .container .layout p {
     max-width: 50rem;
     line-height: 1.5;
 }
 
+@media (max-width:992px) {
+    .replacement .container .layout p {
+        font-size: 0.9rem;
+    }
+}
 /* products */
 
 .products {
@@ -776,7 +789,8 @@ footer >.container nav ul li {
 
 @media (max-width:991px) {
     footer >.container nav ul li {
-        margin-right:0.5rem;
+        margin: 1.5rem 0rem;
+        margin-right: 1.5rem;
     }
 }
 footer >.container nav .subscription {
@@ -788,15 +802,17 @@ footer >.container nav .subscription p {
     margin-bottom: 0.8rem;
 }
 footer >.container nav .subscription input[type='search'] {
-    width: 20rem;
+    width: 25rem;
     background-color: transparent;
     padding: 0.8rem;
     border-radius: 2rem;
     border: 1px solid #B3BDC7;
+    color: var(--White);
 }
 
 footer >.container nav .subscription input[type='search']::placeholder {
     color: #B3BDC7;
+    outline: 0px;
 }
 
 footer >.container nav .subscription button {
