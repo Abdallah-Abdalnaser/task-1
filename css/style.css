@@ -600,8 +600,6 @@ header .contactus span {
     text-align:center;
 }
 
-.values .container .info h1 {}
-
 .values .container .info p {
     font-size: 0.9rem;
     color: var(--gray2);
@@ -621,12 +619,115 @@ header .contactus span {
     padding: 1rem;
 }
 
-.values .container .cards .card img {}
-
-.values .container .cards .card h3 {}
-
 .values .container .cards .card p {
     font-size: 0.9rem;
     color: var(--gray2);
     line-height: 1.5;
+}
+
+/* feedback */
+
+.feedback {
+    margin: 4rem 0px;
+}
+
+.feedback >.container {
+    display: flex;
+}   
+
+@media (max-width:764px) {
+    .feedback >.container {
+        flex-direction: column;
+    }
+}
+
+.feedback .container .info {
+    flex: 2;
+}
+
+.feedback .container .card {
+    background-color: var(--lightGreen2);
+    border: 2px solid var(--Green);
+    border-radius: 1rem;
+    padding: 2rem;
+    flex: 2;
+}
+
+.feedback .container .card .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.feedback .container .card .header span {
+    color: var(--Green);
+    font-weight: bold;
+}
+
+.feedback .container .card .header ul {
+    display: flex;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.feedback .container .card .header ul li {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--gray);
+    margin: 0px 0.1rem;
+}
+
+.feedback .container .card .header ul li.active {
+    background-color: var(--Green);
+}
+
+.feedback .container .card .comment q {
+    line-height: 1.5;
+}
+
+.feedback .container .card .user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.feedback .container .card .user .userinfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feedback .container .card .user .userinfo img {
+    margin-right: 0.4rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+.feedback .container .card .user .userinfo .info h4 {
+    margin: 0px;
+    margin-bottom: 0.2rem;
+}
+
+.feedback .container .card .user .userinfo .info p {
+    margin: 0px;
+    font-size: 0.8rem;
+}
+
+.feedback .container .card .user .chevron i {
+    padding: 0.7rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--Green);
+    color: var(--White);
+    box-shadow: 0px 0px 5px #ccc;
+    transition: 0.3s;
+}
+
+.feedback .container .card .user .chevron i:hover {
+    background-color: var(--BlackGreen);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px #ccc;
 }
