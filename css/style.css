@@ -1,6 +1,8 @@
 :root {
     --Green: #0B9586;
     --Green2: #3CAB90;
+    --lightgreen:#3CAB9026;
+    --lightGreen2: #3CAB900D;
     --BlackGreen: #3cab8fdc;
     --yellow: #FFBB1C;
     --Blackyellow: #dca421;
@@ -318,7 +320,7 @@ header .contactus span {
     }
 }
 
-.about .container .images .card i {
+.about .container .images .card img {
     font-size: 2rem;
 }
 
@@ -398,8 +400,13 @@ header .contactus span {
 .solarkits .container .cards .card {
     box-shadow: 0px 0px 6px #eee;
     border-radius: 1rem;
+    transition: 0.3s;
 }
 
+.solarkits .container .cards .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px #d8d8d8;
+}
 .solarkits .container .cards .card figure {
     margin: 0px;
 }
@@ -414,6 +421,10 @@ header .contactus span {
     padding: 1.5rem;
 }
 
+.solarkits .container .cards .card figure figcaption h3 {
+    margin: 0px;
+}
+
 .solarkits .container .cards .card figure figcaption p {
     font-size: 0.8rem;
     color: var(--gray2);
@@ -424,6 +435,7 @@ header .contactus span {
     font-weight: 600;
     background-color: var(--White);
     color: var(--Green);
+    padding: 0px;
     cursor: pointer;
 }
 
@@ -480,3 +492,99 @@ header .contactus span {
     max-width: 50rem;
     line-height: 1.5;
 }
+
+/* products */
+
+.products {
+    background-color: var(--lightYellow);
+    padding:6rem 0px;
+}
+
+.products >.container {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width:991px) {
+    .products >.container {
+        flex-direction: column;
+    }
+}
+
+.products .container .info {
+    flex: 1;
+}
+
+.products .container .info .icon {
+    position: relative;
+}
+
+.products .container .info .icon img {
+    background-color: var(--Green);
+    color: var(--White);
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    width: 2.9rem;
+}
+
+.products .container .info .icon::before {
+    content: "";
+    position: absolute;
+    top:0%;
+    left: 0%;
+    transform: translate(-14%,-13%);
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--lightgreen);
+    border-radius: 0.5rem;
+    z-index: -1;
+}
+
+.products .container .info h1 {
+    font-size: 2.3rem;
+    margin: 0px;
+}
+
+.products .container .info p {
+    font-size: 0.9rem;
+    /* max-width: 20rem; */
+    color: var(--gray2);
+}
+
+.products .container .cards {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-left: 1rem;
+}
+
+.products .container .cards .card {
+    background-color: var(--lightGreen2);
+    border: 2px solid var(--Green);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.products .container .cards .card img {
+    width: 100%;
+    height:15rem;
+    border-radius: 1rem;
+}
+
+.products .container .cards .card h3 {}
+
+.products .container .cards .card p {
+    font-size: 0.9rem;
+    color: var(--gray2);
+}
+
+.products .container .cards .card button {
+    background-color: transparent;
+    color: var(--Green);
+    border: 0px;
+    padding: 0px;
+}
+
+.products .container .cards .card button i {}
