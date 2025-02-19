@@ -5,7 +5,7 @@ let slideNumber = 1;
 
 
 setInterval(() => {
-        sliderImage.style.cssText = `background-image: url('../images/slider0${slideNumber}.png');`;
+        sliderImage.style.cssText = `background-image: url('images/slider0${slideNumber}.png');`;
         PoletsArray.forEach(function(ele) {
                 ele.classList.remove("active");
         });
