@@ -121,7 +121,7 @@ header nav ul li a {
 @media(max-width:768px) {
     header nav ul li a {
         font-size: 0.7rem;
-        margin: 2rem 0.4rem;
+        margin: 2rem 0.2rem;
     }
 }
 
@@ -741,6 +741,12 @@ header .contactus span {
     transition: 0.3s;
 }
 
+@media (max-width:991px) {
+    .feedback .container .card .user .chevron i {
+        padding: 0.5rem;
+    }
+}
+
 .feedback .container .card .user .chevron i:hover {
     background-color: var(--BlackGreen);
     transform: scale(1.1);
@@ -790,7 +796,7 @@ footer >.container nav ul li {
 @media (max-width:991px) {
     footer >.container nav ul li {
         margin: 1.5rem 0rem;
-        margin-right: 1.5rem;
+        margin-right: 1rem;
     }
 }
 footer >.container nav .subscription {
@@ -813,6 +819,12 @@ footer >.container nav .subscription input[type='search'] {
 footer >.container nav .subscription input[type='search']::placeholder {
     color: #B3BDC7;
     outline: 0px;
+}
+
+@media (max-width:991px) {
+    footer >.container nav .subscription input[type='search'] {
+        width: 100%;
+    }
 }
 
 footer >.container nav .subscription button {
@@ -866,7 +878,7 @@ footer >.container .policy ul li {
 
 @media (max-width:991px) {
     footer >.container .policy ul li {
-        margin-right: 0px 0.5rem;
+        margin-right:0.5rem;
     }
 }
 
